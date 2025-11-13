@@ -14,7 +14,7 @@
     <h1 class="logo">Sandra Ferrer</h1>
     <!-- Botón hamburguesa -->
     <button class="hamburger" aria-label="Abrir menú">
-        <span></span>
+        <span></span><!--Las tres lineas del icono-->
         <span></span>
         <span></span>
     </button>
@@ -103,12 +103,20 @@
     <!-- PROYECTOS -->
     <section id="proyectos" class="section">
         <h2>Proyectos</h2>
-        <div class="projects">
             <div class="card">
                 <h3>Portfolio personal</h3>
-                <p>Diseño y desarrollo de un portfolio moderno con HTML, CSS y JavaScript.</p>
+                <div class="project-images">
+                <img src="Proyecto_capturas/html_portfolio.png" alt="Estructura de la barra de navegación y sección hero del portfolio " class="clickable" />
+                <img src="Proyecto_capturas/responsive_portfolio.png" alt="Estructura para movil" class="clickable" />
+                <img src="Proyecto_capturas/js_portfolio.png" alt="Menu hamburguesa e imagenes enn grande" class="clickable" />
+                
             </div>
-           
+            <p><strong>Tecnologías:</strong></p>
+                <div class="tech-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+        </div>
         </div>
 
         <!-- Proyecto web TFG -->
@@ -147,7 +155,7 @@
     <p>© 2025 Sandra Ferrer · Todos los derechos reservados</p>
 </footer>
 
-
+<!--Esto es para que las fotos se puedan hacer grandes y hay una X para cerrarlas-->
 <div id="lightbox" class="lightbox">
     <span class="close">&times;</span>
     <img class="lightbox-img" src="">
