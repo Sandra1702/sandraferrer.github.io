@@ -3,7 +3,7 @@ const sections = document.querySelectorAll("section");
 //Selecciona todos los enlaces dentro del menu de navegación
 const navLinks = document.querySelectorAll("nav a");
 //Selecciona el boton hamburguesa para el menu movil
-const hamburger = document.querySelector(".hamburger");
+const hamburger = document.querySelector(".menu-hamburguesa");
 
 //Selecciona el elemento <nav> completo
 const nav = document.querySelector("nav");
@@ -25,26 +25,26 @@ window.addEventListener("scroll", () => {
 
   //Recorre todos los enlaces del menu de navegación
   navLinks.forEach((a) => {
-    a.classList.remove("active");// Quita la clase "active" de todos los enlaces
+    a.classList.remove("activo");// Quita la clase "active" de todos los enlaces
     // Si el enlace contiene el id de la sección actual en su href...
     if (a.getAttribute("href").includes(current)) {
-      a.classList.add("active");//...añade la clase "active" solo a ese enlace
+      a.classList.add("activo");//...añade la clase "active" solo a ese enlace
     }
   });
 });
 
 // Toggle menú hamburguesa
 hamburger.addEventListener("click", () => {
-  nav.classList.toggle("active");
-  hamburger.classList.toggle("active"); // anima la X
+  nav.classList.toggle("activo");
+  hamburger.classList.toggle("activo"); // anima la X
 });
 
 // Cerrar menú al pulsar un enlace
 navLinks.forEach(link => {
   link.addEventListener("click", () => {
-    if(nav.classList.contains("active")){
-      nav.classList.remove("active");
-      hamburger.classList.remove("active"); // vuelve a hamburguesa
+    if(nav.classList.contains("activo")){
+      nav.classList.remove("activo");
+      hamburger.classList.remove("activo"); // vuelve a hamburguesa
     }
   });
 });

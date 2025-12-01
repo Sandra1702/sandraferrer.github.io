@@ -20,7 +20,7 @@ body {
 }
 
 /* NAVBAR FIJA */
-.navbar {
+.barra-navegacion {
   position: fixed;/*se fija al inicio del documento*/
   top: 0;
   width: 100%;
@@ -52,7 +52,7 @@ nav a {
 }
 
 nav a:hover,
-nav a.active {
+nav a.activo {
   color: var(--accent);
 }
 
@@ -62,7 +62,7 @@ main {
 }
 
 /* HERO */
-.hero {
+.inicio-hero {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,27 +72,27 @@ main {
   gap: 3rem; /* menos espacio entre texto e imagen */
 }
 
-.hero-content {
+.contenido-hero {
   max-width: 600px;
   margin-bottom: 0.5rem; /* reduce el espacio entre el texto y los botones */
 }
 
-.hero h2 {
+.inicio-hero h2 {
   font-size: 2rem;
   margin-bottom: 0.8rem;
 }
 
-.hero span {
+.inicio-hero span {
   color: var(--accent);
 }
 
-.hero-img {
+.Foto-de-perfil {
   width: 230px;
   border-radius: 50%;
   margin-top: 0.5rem; /* mucho menos margen arriba */
 }
 
-.buttons {
+.botones {
   margin-top: 1rem; /* botones más cerca del texto */
   display: flex;
   justify-content: center;
@@ -165,7 +165,7 @@ main {
 }
 
 /* PROYECTOS */
-.projects {
+.proyectos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
@@ -181,7 +181,7 @@ footer {
 }
 
 /* HAMBURGUESA */
-.hamburger {
+.menu-hamburguesa {
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -193,7 +193,7 @@ footer {
   z-index: 1001;
 }
 
-.hamburger span {
+.menu-hamburguesa span {
   display: block;
   height: 3px;
   background: var(--accent);
@@ -202,21 +202,21 @@ footer {
 }
 
 /* Transformación en X */
-.hamburger.active span:nth-child(1) {
+.menu-hamburguesa.activo span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
 
-.hamburger.active span:nth-child(2) {
+.menu-hamburguesa.activo span:nth-child(2) {
   opacity: 0;
 }
 
-.hamburger.active span:nth-child(3) {
+.menu-hamburguesa.activo span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .hamburger {
+  .menu-hamburguesa {
     display: flex;
   }
 
@@ -245,7 +245,7 @@ footer {
     gap: 2rem;
   }
 
-  nav.active {
+  nav.activo {
     right: 0;
   }
 
@@ -257,7 +257,7 @@ footer {
     padding-top: 70px;
   }
 
-  .hero {
+  .inicio-hero {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -266,7 +266,7 @@ footer {
     gap: 0.8rem; /* menos espacio vertical */
   }
 
-  .hero-img {
+  .inicio-hero-img {
     width: 180px;
     margin-top: 0.2rem; /* casi pegada al texto */
   }
@@ -281,25 +281,14 @@ footer {
     margin-left: 0;
   }
 
-  .projects {
+  .proyectos {
     grid-template-columns: 1fr;
   }
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 /* GRID DE IMÁGENES DEL PROYECTO TFG */
-.project-images {
+.imagenes-proyecto {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
@@ -308,7 +297,7 @@ footer {
 }
 
 
-.project-images img {
+.imagenes-proyecto img {
     width: 100%;
     height: 180px; /* altura fija para todas */
     object-fit: cover; /* recorta la imagen para que llene el contenedor */
@@ -317,7 +306,7 @@ footer {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-images img:hover {
+.imagenes-proyecto img:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
@@ -343,8 +332,6 @@ footer {
 .tech-tags span:hover {
     background-color: var(--accent-dark);
 }
-
-
 
 
 /* LIGHTBOX / MODAL PARA IMÁGENES */
